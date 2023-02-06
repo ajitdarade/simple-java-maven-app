@@ -51,7 +51,7 @@ jobs:
     # Automatically create the project in Dependency-Track if it doesn't exist
         autocreate: true
     # Path and filename of the BOM
-     #   bomfilename: # optional, default is bom.xml
+        bomfilename: /home/runner/work/simple-java-maven-app/simple-java-maven-app/target/bom.xml
 
     - name: OWASP Dependency Track check
   # You may pin to the exact commit or the version.
