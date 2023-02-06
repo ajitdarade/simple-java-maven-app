@@ -25,7 +25,7 @@ jobs:
         id: riskscoreFromDT
         uses:  Quobis/action-owasp-dependecy-track-check@main
         with:
-          url: 'http://13.58.205.57:8080/'
+          url: 'http://3.142.132.207:8080/'
           key: 'XKCCVYXgea4QWCv8DOBj1Y3WyxkjuEHP'
           language: 'java'
       
