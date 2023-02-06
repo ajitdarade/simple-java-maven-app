@@ -35,7 +35,7 @@
         <version>2.7.4</version>
         <executions>
             <execution>
-                <phase>compile</phase>
+                <phase>package</phase>
                 <goals>
                     <goal>makeAggregateBom</goal>
                 </goals>
