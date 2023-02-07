@@ -39,7 +39,7 @@ jobs:
         projectname: 'demo'
         projectversion: 'master'
         serverhostname: 'ec2-18-189-143-172.us-east-2.compute.amazonaws.com'
-        apikey: XKCCVYXgea4QWCv8DOBj1Y3WyxkjuEHP
+        apikey: ${{ secrets.DEPENDENCYTRACK_APIKEY }}
         project: '71e6112d-62b9-4c6a-b8cd-c1b3185b7f98'
         bomfilename: /home/runner/work/simple-java-maven-app/simple-java-maven-app/target/sbom.xml
 # You may pin to the exact commit or the version.
