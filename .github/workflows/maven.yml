@@ -39,7 +39,7 @@ jobs:
       uses: DependencyTrack/gh-upload-sbom@v1.0.0
       with:
     # Dependency-Track hostname
-        serverhostname: 18.189.143.172:8080
+        serverhostname: ec2-18-189-143-172.us-east-2.compute.amazonaws.com
     # Dependency-Track port
         port: 8080
     # Dependency-Track API key
