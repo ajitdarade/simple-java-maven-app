@@ -44,6 +44,7 @@ jobs:
         port: 8080
     # Dependency-Track API key
         apikey: XKCCVYXgea4QWCv8DOBj1Y3WyxkjuEHP
+        protocol: http
     # Project name in Dependency-Track
         projectname: demo
     # Project version in Dependency-Track
