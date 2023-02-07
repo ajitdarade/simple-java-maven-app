@@ -47,7 +47,7 @@ jobs:
     # Project name in Dependency-Track
         projectname: demo
     # Project version in Dependency-Track
-        projectversion: 1.0-SNAPSHOT
+        projectversion: 2.7.4
     # Automatically create the project in Dependency-Track if it doesn't exist
         autocreate: true
     # Path and filename of the BOM
