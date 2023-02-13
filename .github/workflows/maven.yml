@@ -34,8 +34,8 @@ jobs:
       with:
         path: '/home/runner/work/simple-java-maven-app/simple-java-maven-app/target/*'
     - name: Send greeting
-      run: curl --location --request POST 'http://3.128.205.114:8081/api/v1/bom' --header 'X-Api-Key:XKCCVYXgea4QWCv8DOBj1Y3WyxkjuEHP' --form 'project="ae3014e4-0c87-4450-ba0c-2ccd17435bfb"' --form 'bom=@"/home/runner/work/simple-java-maven-app/simple-java-maven-app/target/sbom.xml"'
-
+      run: curl --location --request POST 'http://3.128.205.114:8081/api/v1/bom' --header 'Content-Type:application/form-data' --header 'X-Api-Key:XKCCVYXgea4QWCv8DOBj1Y3WyxkjuEHP' --form "projectVersion=1.4" --form "autoCreate=true" --form 'projectName="demo2"' --form 'bom=@"/home/runner/work/simple-java-maven-app/simple-java-maven-app/target/sbom.xml"'
+          
 #    - name: Upload BOM to Dependency-Track
 #      uses: DependencyTrack/gh-upload-sbom@v1.0.0
 #      with:
