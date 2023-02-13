@@ -1,0 +1,38 @@
+# This workflow will build a Java project with Maven, and cache/restore any dependencies to improve the workflow execution time
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-java-with-maven
+
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+name: dep-track
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up JDK 11
+      uses: actions/setup-java@v3
+      with:
+        java-version: '11'
+        distribution: 'temurin'
+        cache: maven
+    - name: Build with Maven
+      run: mvn -B package --file pom.xml
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v3.1.2
+      with:
+        path: '/home/runner/work/simple-java-maven-app/simple-java-maven-app/target/*'
+    - name: bom upload
+      run: curl --location --request POST 'http://3.128.205.114:8081/api/v1/bom' --header 'X-Api-Key:XKCCVYXgea4QWCv8DOBj1Y3WyxkjuEHP' --form 'project="487fefed-25a6-4589-b1e0-e0a80642af82"' --form 'bom=@"/home/runner/work/simple-java-maven-app/simple-java-maven-app/target/sbom.xml"'
+          
